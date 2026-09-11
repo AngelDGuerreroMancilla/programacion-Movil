@@ -7,52 +7,223 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-    <nav class="navbar bg-primary ">
-        <div class="container-fluid">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-dark">
+    <div class="container">
+        <a class="navbar-brand text-white" href="#"><b>Bootstrap</b></a>
+        
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#miNavbar" aria-controls="miNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <a class="navbar-brand text-white " href="#"><b>Bootstrap</b></a>
-            <div>
+      
+        <div class="collapse navbar-collapse" id="miNavbar">
+       
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+               
+                    <a class="nav-link active text-white" href="#"><b>Home</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white-50" href="#">Link</a>
+                </li>
                 
-            </div>
-            <a class="nav-link text-white " href="#">Home</a>
-           
-            <a class="nav-link text-white" href="#">Link</a>
-          
-            <div class=" dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-base-toggle="dropdown">
-                    dropdown
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Esto</a></li>
-                    <li><a class="dropdown-item" href="#"> no</a></li>
-                    <li><a class="dropdown-item" href="#"> lo  </a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Pidio</a></li>
-                </ul>
-            </div>
-            
-            <h3 class="text-white mr-">+55555 55555</h3>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white-50" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Esto</a></li>
+                        <li><a class="dropdown-item" href="#">no</a></li>
+                        <li><a class="dropdown-item" href="#">lo</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Pidio</a></li>
+                    </ul>
+                </li>
+
+              
+                <li class="nav-item">
+                    <a class="nav-link disabled text-white-50" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+      
+                <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                    <span class="text-white fw-bold">+55555 55555</span>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
     
 
-    <div class="carousel slide">
+    <!-- carrusel -->
+    <div class="carousel slide" id="carouselExample" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
         <div class="carousel-inner">
             <div class="carousel-item active">
-            <img src="./images/3.jpg" class="d-block w-100" alt="...">
+                <img src="./images/3.jpg" class="d-block w-100" alt="...">
             </div>
-            
         </div>
+
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
+
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
     
+  
+
+  
+    <div class="container">
+        <div class="row g-4">
+
+              <!-- titulo y subtitulo -->
+            <div>
+                <h1 class="text-center p-5">Lorem, ipsum dolor.</h1>
+                <h5 class="text-info text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum possimus architecto commodi voluptatem debitis atque est culpa vero sequi, exercitationem quod cupiditate odit veniam ullam error ad, obcaecati illo ea!</h5>
+            </div>
+
+              <!-- cards principales -->
+            <div class="py-col-12 col-md-6 col-lg-4">
+                <div class="card p-0">
+                    <img src="./images/2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a href="#" class="btn btn-info text-white">Más información</a>                        
+                    </div>
+                </div>
+            </div>
+
+            <div class=" py-2 col-12 col-md-6 col-lg-4" >
+                <div class="card  p-0">
+                    <img src="./images/2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a href="#" class="btn btn-info text-white">Más información</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" py-2 col-12 col-md-6 col-lg-4" >
+                <div class="card p-0">
+                    <img src="./images/2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>                        
+                        <a href="#" class="btn btn-info text-white">Más información</a>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hello, World! -->
+    <div class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="p-5" style="height: 80%">
+                    <h1>Hello, World!</h1>
+                    <h5>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information. </h5>
+                    <h5 class="pt-5">it uses utility classes for typography and spacing to space content out within the jumbotron.</h5>
+                    <a href="#" class="btn btn-primary text-white ">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- acordeon  -->
+    <div class="container">
+        <div class="row">
+
+            <div class="text-center">
+                <h1 class="pt-4">Lorem, ipsum dolor.</h1>
+                <h5 class="text-info p-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum possimus architecto commodi voluptatem debitis atque est culpa vero sequi, exercitationem quod cupiditate odit veniam ullam error ad, obcaecati illo ea!</h5>
+            </div>
+
+            <div id="acordeon" class="col-12 col-md-6 mb-4">
+        
+                <div class="mb-1">
+                    <button class="btn btn-info w-100 text-start text-white rounded-0  p-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUno" aria-expanded="true" aria-controls="collapseUno">
+                    Collapsible Group Item #1
+                    </button>
+                    <div id="collapseUno" class="collapse show" data-bs-parent="#acordeon">
+                    <div class=" card accordion-body rounded-0 p-4">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed optio aperiam laborum quidem tempora perspiciatis soluta. Aliquid fuga animi, commodi id saepe laudantium dignissimos aut esse reprehenderit veniam obcaecati libero temporibus explicabo tempore voluptatum dolore. Quae a quos expedita, cumque fuga natus dolorem ea aliquid tempora, pariatur necessitatibus laboriosam? Atque nam perspiciatis minus quasi dolores, incidunt at natus deserunt ipsam totam eius, obcaecati eveniet veniam libero numquam fugiat aliquid. Consequuntur quo assumenda et dignissimos totam illo? Voluptatum labore eaque ipsa.
+                    </div>
+                    </div>
+                </div>
+
+               
+                <div class="mb-1">
+                    <button class="btn btn-info w-100 text-start text-white rounded-0  p-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDos" aria-expanded="false" aria-controls="collapseDos">
+                    Collapsible Group Item #2
+                    </button>
+                    <div id="collapseDos" class="collapse" data-bs-parent="#acordeon">
+                    <div class=" card accordion-body rounded-0 p-4">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed optio aperiam laborum quidem tempora perspiciatis soluta. Aliquid fuga animi, commodi id saepe laudantium dignissimos aut esse reprehenderit veniam obcaecati libero temporibus explicabo tempore voluptatum dolore. Quae a quos expedita, cumque fuga natus dolorem ea aliquid tempora, pariatur necessitatibus laboriosam? Atque nam perspiciatis minus quasi dolores, incidunt at natus deserunt ipsam totam eius, obcaecati eveniet veniam libero numquam fugiat aliquid. Consequuntur quo assumenda et dignissimos totam illo? Voluptatum labore eaque ipsa.
+                    </div>
+                    </div>
+                </div>
+                
+                <div class="mb-1">
+                    <button class="btn btn-info w-100 text-start text-white rounded-0  p-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTres" aria-expanded="false" aria-controls="collapseTres">
+                    Collapsible Group Item #3
+                    </button>                    
+                    <div id="collapseTres" class="collapse" data-bs-parent="#acordeon">
+                    <div class=" card accordion-body rounded-0 p-4">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores facilis ullam voluptates accusamus assumenda rerum reiciendis at. Earum adipisci ratione id ea accusamus deleniti dolor culpa voluptatem ullam! Sapiente voluptas dolor possimus, in sed a eaque, eum quia corporis facilis molestiae deleniti praesentium soluta aliquam atque velit ipsam repellat omnis. Quae, neque sint consequuntur, odio, obcaecati quibusdam ducimus iusto consequatur a similique facilis voluptate dignissimos laborum officiis illum! Culpa facere dolores nobis iure quisquam dolore soluta hic voluptatem repellat amet.
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- acordeon de imagenes -->
+            <div class="col-12 col-md-6 mb-4" >
+                <img src="./images/2.jpg" class="w-100" alt="">
+
+                <div class="bg-info w-100  p-1 text-white rounded-0 border-0 ">
+                    <p class=" p-1 px-3 m-0">Lorem, ipsum dolor.</p>
+                </div>
+
+               <div class="rounded-0 p-1 m-0 border border-secundary"> 
+                    <p class=" p-1 px-3 m-0">Lorem, ipsum dolor.</p>
+                </div>
+
+                <div class="rounded-0 p-1 m-0 border border-secundary"> 
+                    <p class=" p-1 px-3 m-0">Lorem, ipsum dolor.</p>
+                </div>
+
+                <div class="rounded-0 p-1 m-0 border border-secundary"> 
+                    <p class=" p-1 px-3 m-0">Lorem, ipsum dolor.</p>
+                </div>
+
+                <div class="rounded-0 p-1 m-0 border border-secundary"> 
+                    <p class=" p-1 px-3 m-0">Lorem, ipsum dolor.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="text-bg-dark p-5 text-center">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid atque magnam non dicta quasi, reiciendis fuga soluta dolores voluptatum nesciunt quas rem illo dolore sunt numquam amet doloremque voluptatibus pariatur natus excepturi corrupti officia, nostrum porro. Qui voluptate officiis illum incidunt nostrum quia minus, quae suscipit, aspernatur dolores a natus?
+    </footer>
+
+
+
 
     
 
