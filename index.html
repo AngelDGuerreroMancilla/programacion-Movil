@@ -1,67 +1,315 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica B4 - Réplica Marca</title>
+  <!-- Bootstrap 5 CSS e Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<body>
-    <div class="container">
-        <div class="row">
+<body class="bg-light">
 
-            <div class="col-12 col-sm-6 col-md-4 bg-danger" >
-               
-                <h5><b>Logo de empresa</b></h5>
-               
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-8 p-1 bg-warning">
-                
-                <h6>Menu de navegacion</h6>
-            
-            </div>
-            
-            <div style="padding: 6rem;" class="col-12 bg-secondary" >
-                
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam deleniti alias maiores, perspiciatis consequuntur optio unde expedita praesentium repellat delectus beatae odit repudiandae provident cum nemo, ex impedit pariatur quis?</p>
-                
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-4 p-3 bg-success">
-                
-                <h2><b>titulo 1</b></h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam deleniti alias maiores, perspiciatis consequuntur optio unde expedita praesentium repellat delectus beatae odit repudiandae provident cum nemo, ex impedit pariatur quis?</p>
-                
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-4 p-3 bg-info">
-                
-                <h2><b>titulo 1</b></h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam deleniti alias maiores, perspiciatis consequuntur optio unde expedita praesentium repellat delectus beatae odit repudiandae provident cum nemo, ex impedit pariatur quis?</p>
-                
-            </div>
-
-            <div class="col-12 col-md-4 p-3 bg-success">
-                
-                <h2> <b>titulo 1</b></h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam deleniti alias maiores, perspiciatis consequuntur optio unde expedita praesentium repellat delectus beatae odit repudiandae provident cum nemo, ex impedit pariatur quis?</p>
-                
-            </div>
-            <div class="col-md-6 bg-secondary">
-                <h2><b>Footer A</b></h2>
-            </div>
-            <div class="col-md-6 bg-warning">
-                <h2><b>Footer B</b></h2>
-            </div>
-            
-
-        </div>
+  <!-- ================= SECCIÓN 1: CABECERA Y NOTICIA PRINCIPAL ================= -->
+  <header class="bg-white border-bottom">
+    <!-- Barra superior -->
+    <div class="container d-flex flex-wrap justify-content-between align-items-center py-2">
+      <div class="d-none d-md-flex gap-3 small text-secondary">
+        <a href="#" class="text-decoration-none text-secondary">La portada de hoy</a>
+        <a href="#" class="text-decoration-none text-secondary">Radio MARCA</a>
+        <a href="#" class="text-decoration-none text-secondary">LaLiga Fantasy</a>
+      </div>
+      <a href="#" class="fs-2 fw-black text-danger text-decoration-none fw-bold">MARCA ⚽</a>
+      <div class="d-flex align-items-center gap-2">
+        <span class="small">🇪🇸 ES</span>
+        <button class="btn btn-danger btn-sm fw-bold">Suscríbete</button>
+        <a href="#" class="small text-decoration-none text-secondary">Iniciar sesión</a>
+      </div>
     </div>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
 
+    <!-- Menú de navegación principal (Rojo) -->
+    <nav class="navbar navbar-expand-md bg-danger navbar-dark py-1">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0 fw-bold">
+            <li class="nav-item"><a class="nav-link active" href="#">Fútbol</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Baloncesto</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Motor</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Polideportivo</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Más +</a></li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control form-control-sm me-1" type="search" placeholder="Buscar en marca.com">
+            <button class="btn btn-sm btn-light text-danger" type="submit"><i class="bi bi-search"></i></button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Tira de escudos deslizable -->
+    <div class="container py-2 d-flex overflow-auto gap-2 text-nowrap align-items-center">
+      <span class="badge text-bg-danger rounded-circle p-2">ATH</span>
+      <span class="badge text-bg-danger rounded-circle p-2">ATM</span>
+      <span class="badge text-bg-primary rounded-circle p-2">FCB</span>
+      <span class="badge text-bg-success rounded-circle p-2">BET</span>
+      <span class="badge text-bg-info rounded-circle p-2">CEL</span>
+      <span class="badge text-bg-primary rounded-circle p-2">ESP</span>
+      <span class="badge text-bg-dark rounded-circle p-2">RMA</span>
+      <span class="badge text-bg-warning rounded-circle p-2">VAL</span>
+      <span class="badge text-bg-danger rounded-circle p-2">SEV</span>
+      <span class="ms-auto text-success fw-bold small">marcaapuestas.es</span>
+    </div>
+  </header>
+
+  <main class="container my-3">
+    <!-- Banner Publicitario -->
+    <div class="bg-danger text-white p-3 rounded d-flex flex-wrap justify-content-between align-items-center mb-3">
+      <div>
+        <span class="fs-5 fw-bold">🔥 Caliente.mx Te regala $300</span>
+        <button class="btn btn-warning btn-sm ms-2 fw-bold">APUESTA AQUÍ</button>
+      </div>
+      <button class="btn btn-outline-light btn-sm mt-2 mt-md-0">BAJA LA APP</button>
+    </div>
+
+    <!-- Barra En directo / Agenda -->
+    <div class="bg-white p-2 border rounded d-flex flex-wrap align-items-center gap-3 small mb-4">
+      <span class="fw-bold">Agenda</span>
+      <span class="badge bg-danger">En directo</span>
+      <span class="text-secondary">Todas las noticias Última hora</span>
+      <span class="text-secondary d-none d-sm-inline">Lo mejor del día</span>
+      <span class="ms-auto text-danger fw-bold">Ver más directos ▼</span>
+    </div>
+
+    <!-- Bloque de Noticias 1 (Hero principal 8 cols + 3 laterales 4 cols) -->
+    <div class="row g-4 mb-5">
+      <!-- Noticia Principal (Izquierda) -->
+      <div class="col-12 col-lg-8">
+        <div class="card bg-dark text-white border-0 h-100 overflow-hidden">
+          <div class="ratio ratio-16x9 bg-secondary d-flex align-items-center justify-content-center">
+            <span class="fs-4 text-light opacity-50">[ Imagen Champions League ]</span>
+          </div>
+          <div class="card-img-overlay d-flex flex-column justify-content-end bg-gradient">
+            <span class="badge bg-primary w-auto align-self-start mb-2">CHAMPIONS</span>
+            <h3 class="card-title fw-bold">¿Cuál es el mejor once para reinar en Europa?</h3>
+            <div class="d-flex justify-content-between small text-white-50">
+              <span>RUBÉN JIMÉNEZ / ENRIQUE MEDINA</span>
+              <span>💬 458</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Noticias Laterales (Derecha) -->
+      <div class="col-12 col-lg-4 d-flex flex-column justify-content-between gap-3">
+        <div class="card p-2 border">
+          <span class="text-primary small fw-bold">LALIGA SANTANDER</span>
+          <div class="d-flex gap-2 align-items-center">
+            <div class="bg-secondary text-white p-3 rounded small">[ Foto ]</div>
+            <div>
+              <h6 class="mb-1 fw-bold">Amenaza de huelga</h6>
+              <span class="small text-muted">💬 396</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card p-2 border">
+          <span class="text-primary small fw-bold">FICHAJES</span>
+          <div class="d-flex gap-2 align-items-center">
+            <div class="bg-secondary text-white p-3 rounded small">[ Foto ]</div>
+            <div>
+              <h6 class="mb-1 fw-bold">Mercado: el 'recambio' de Filipe Luis</h6>
+              <span class="small text-muted">💬 92</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card p-2 border">
+          <span class="text-primary small fw-bold">REAL MADRID</span>
+          <div class="d-flex gap-2 align-items-center">
+            <div class="bg-secondary text-white p-3 rounded small">[ Foto ]</div>
+            <div>
+              <h6 class="mb-1 fw-bold">Champions y Liga para el portero titular</h6>
+              <span class="small text-muted">💬 296</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= SECCIÓN 2: NOTICIAS SECUNDARIAS ================= -->
+    <section class="mb-5">
+      <!-- Barra secundaria -->
+      <div class="bg-danger text-white p-2 rounded-top d-flex justify-content-between align-items-center mb-3">
+        <div class="d-flex gap-3 fw-bold small">
+          <span class="bg-white text-danger px-2 rounded">M</span>
+          <span>Fútbol ▼</span>
+          <span>Baloncesto ▼</span>
+          <span>Motor ▼</span>
+          <span class="d-none d-md-inline">Polideportivo ▼</span>
+        </div>
+        <button class="btn btn-sm btn-outline-light py-0">Suscríbete</button>
+      </div>
+
+      <!-- 3 Tarjetas en fila -->
+      <div class="row g-4 mb-3">
+        <div class="col-12 col-md-4">
+          <div class="card h-100">
+            <div class="ratio ratio-16x9 bg-secondary text-white d-flex align-items-center justify-content-center">
+              <span class="text-light opacity-50">[ Foto 1 ]</span>
+            </div>
+            <div class="card-body">
+              <span class="badge bg-primary mb-2">FÚTBOL</span>
+              <h6 class="card-title fw-bold">Felix Orode, el jugador nigeriano que explica el festejo de Dele Alli</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="card h-100">
+            <div class="ratio ratio-16x9 bg-secondary text-white d-flex align-items-center justify-content-center">
+              <span class="text-light opacity-50">[ Foto 2 ]</span>
+            </div>
+            <div class="card-body">
+              <span class="badge bg-primary mb-2">SERIE A</span>
+              <h6 class="card-title fw-bold">Cristiano habla sobre Cuadrado y la cesión del número 7</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="card h-100">
+            <div class="ratio ratio-16x9 bg-secondary text-white d-flex align-items-center justify-content-center">
+              <span class="text-light opacity-50">[ Foto 3 ]</span>
+            </div>
+            <div class="card-body">
+              <span class="badge bg-primary mb-2">MÉXICO</span>
+              <h6 class="card-title fw-bold">La joya celeste que hace soñar a Cruz Azul</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tira "Es noticia" -->
+      <div class="bg-body-secondary p-2 rounded small text-nowrap overflow-auto mb-4">
+        <span class="fw-bold">Es noticia:</span>
+        <span class="ms-2 text-secondary">Mercado de fichajes | Rodrigo | Fernando Alonso | Lewandowski | Usain Bolt</span>
+      </div>
+
+      <!-- 2 Noticias Compactas -->
+      <div class="row g-3 mb-4">
+        <div class="col-12 col-md-6">
+          <div class="card p-2 d-flex flex-row gap-3 align-items-center">
+            <div class="bg-secondary text-white p-4 rounded">[ Foto ]</div>
+            <div>
+              <span class="badge bg-primary mb-1">LALIGA SANTANDER</span>
+              <h6 class="mb-1 fw-bold">¿Qué equipos y jugadores estuvieron en la reunión de la AFE?</h6>
+              <small class="text-muted">💬 14</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="card p-2 d-flex flex-row gap-3 align-items-center">
+            <div class="bg-secondary text-white p-4 rounded">[ Foto ]</div>
+            <div>
+              <span class="badge bg-primary mb-1">SEVILLA FC</span>
+              <h6 class="mb-1 fw-bold">Draxler y Martial, nombres 'top' en la recta final del mercado</h6>
+              <small class="text-muted">💬 64</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 Tarjetas Medianas -->
+      <div class="row g-3">
+        <div class="col-12 col-md-6">
+          <div class="card">
+            <div class="ratio ratio-16x9 bg-secondary text-white d-flex align-items-center justify-content-center">
+              <span class="text-light opacity-50">[ Foto Lunin ]</span>
+            </div>
+            <div class="card-body">
+              <span class="badge bg-primary mb-1">REAL MADRID</span>
+              <h6 class="card-title fw-bold">Lunin, muy cerca de irse cedido al Leganés</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="card">
+            <div class="ratio ratio-16x9 bg-secondary text-white d-flex align-items-center justify-content-center">
+              <span class="text-light opacity-50">[ Foto Rodrigo ]</span>
+            </div>
+            <div class="card-body">
+              <span class="badge bg-primary mb-1">REAL MADRID</span>
+              <h6 class="card-title fw-bold">Algo pasa con Rodrigo</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= SECCIÓN 3: PIE DE PÁGINA (FOOTER) ================= -->
+  <footer class="bg-dark text-white pt-4 pb-3">
+    <div class="container">
+      <h6 class="text-center text-uppercase border-bottom border-secondary pb-3 mb-4">Otras webs de Unidad Editorial</h6>
+      
+      <!-- 4 Columnas del Footer -->
+      <div class="row g-4 small mb-4">
+        <div class="col-6 col-md-3">
+          <h6 class="text-white fw-bold">Marca</h6>
+          <ul class="list-unstyled text-secondary">
+            <li>App Marca</li>
+            <li>Apuestas Deportivas</li>
+            <li>Clasificación LaLiga</li>
+            <li>Marca eSports</li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h6 class="text-white fw-bold">Ocio y Moda</h6>
+          <ul class="list-unstyled text-secondary">
+            <li>Tiramillas</li>
+            <li>Moda - Telva</li>
+            <li>BUHO Magazine</li>
+            <li>Programación TV</li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h6 class="text-white fw-bold">Unidad Editorial</h6>
+          <ul class="list-unstyled text-secondary">
+            <li>El Mundo</li>
+            <li>Expansión</li>
+            <li>CuídatePlus</li>
+            <li>Diario Médico</li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h6 class="text-white fw-bold">Formación y Empleo</h6>
+          <ul class="list-unstyled text-secondary">
+            <li>Escuela Unidad Editorial</li>
+            <li>Unidad Editorial</li>
+            <li>Expansión y Empleo</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Legal y Redes -->
+      <div class="border-top border-secondary pt-3 text-center small text-secondary">
+        <p class="mb-1">© 2026 Unidad Editorial Información Deportiva, S.L.U. Todos los derechos reservados.</p>
+        <p class="mb-2">Términos y condiciones · Política de privacidad · Cookies · Contacto · Ayuda</p>
+        <div>
+          <span>Síguenos en: </span>
+          <i class="bi bi-facebook mx-1"></i>
+          <i class="bi bi-twitter-x mx-1"></i>
+          <i class="bi bi-instagram mx-1"></i>
+          <i class="bi bi-rss mx-1"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
