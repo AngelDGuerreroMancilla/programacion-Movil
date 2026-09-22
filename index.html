@@ -5,26 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-    <div class="container">
 
-        <div class="row">
-            <div>
-                <img src="" alt="">
-                <p>la portada de hoy</p>
+<body>
+    <div class="container-fluid position-relative p-4">
+
+        <div class=" d-flex justify-content-between align-items-center">
+
+            <div class="d-flex align-items-center">
+
+                <div class="d-flex align-items-center" >
+                    <img class="mini-item ps-2" src="./images/radio-marca.png" alt="">
+                    <p class="m-0 px-2 py-1  border-end border-secundary"> La portada de hoy</p>
+                </div>
+                <div class="d-flex align-items-center ">
+                    <img class="mini-item ps-2" src="./images/cuidate+.png" alt="">
+                    <p class="m-0 px-2 py-1  border-end border-secundary">Radio MARCA</p>
+                </div>
+                <div class="d-flex align-items-center " >
+                    <img class="mini-item ps-2" src="./images/lo_mas_trending.png" alt="">
+                    <p class="m-0 px-2 py-1"  >La liga fantasy Marca</p>
+                </div> 
             </div>
-            <div>
-                <img src="" alt="">
-                <p>Radio MARCA</p>
+            
+
+
+            <div class=" position-absolute top-50 start-50 translate-middle  ">
+                <img class="d-flex " src="./images/marca.png" alt="">
             </div>
-            <div>
-                <img src="" alt="">
-                <p>laliga fantasy Marca</p>
+
+            <div class="d-flex align-items-center gap-3">
+
+                <div class="dropdown">
+
+                    <button 
+                        class="btn btn-light dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown">
+                        🇪🇸 ES
+                    </button>
+
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="#">🇪🇸 Español</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="#">🇬🇧 English</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
                 
-            </div> 
+            
         </div>
+
             
         
 
