@@ -313,83 +313,75 @@
     </div>
     
     <!-- anuncio Caliente -->
-    <div class="d-flex justify-content-center p-3" >
+    <div class=" container d-flex justify-content-center p-3" >
         <a href="#">
             <img src="./images/anuncio_caliente.png" alt="">
         </a>
     </div>
     
     <!-- lineas de directos -->
-    <div class="container">
+    <div class="container my-3">
+        <!-- Contenedor principal: En columna hasta 'md', en fila a partir de 'lg' -->
+        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3">
 
-        <div class="d-flex justify-content-between align-items-center">
-
-            <div class="d-flex">
-                <h4 class="pe-4 mb-0">
+            <!-- Grupo Izquierdo: Título y Tarjetas -->
+            <!-- Se apila en móviles, se alinea horizontalmente a partir de 'md' -->
+            <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center gap-3 w-100">
+                
+                <h4 class="mb-0 me-md-2">
                     <b>Agenda</b>
                 </h4>
 
-                <span class="d-flex px-2">
-                    <div class="bg-danger px-3 d-flex align-items-center text-white"
-                        style="height: 60px;">
-                        <p class="mb-0">
+                <!-- Tarjeta 1: En directo -->
+                <div class="d-flex flex-grow-1 w-100" style="max-width: 400px;">
+                    <div class="bg-danger px-3 d-flex align-items-center text-white" style="height: 60px;">
+                        <p class="mb-0 text-nowrap">
                             <b>En directo</b>
                         </p>
                     </div>
-
-    
-                    <div class="bg-body-secondary px-3 d-flex flex-column justify-content-center"
-                        style="width: 200px; height: 60px;">
-
-                        <p class="mb-0">Todas las noticias</p>
-
+                    <!-- flex-grow-1 permite que esta sección absorba el espacio sobrante -->
+                    <div class="bg-body-secondary px-3 d-flex flex-column justify-content-center flex-grow-1" style="height: 60px;">
+                        <p class="mb-0 text-truncate">Todas las noticias</p>
                         <p class="mb-0">
                             <b>Última hora</b>
                         </p>
-
                     </div>
-                </span>
-                
+                </div>
 
-                <span class="d-flex px-2">
-                    <div class="bg-danger px-3 d-flex align-items-center text-white"
-                        style="height: 60px;">
-                        <p class="mb-0">
-                            <b>Lo mejor del dia</b>
+                <!-- Tarjeta 2: Lo mejor del día -->
+                <div class="d-flex flex-grow-1 w-100" style="max-width: 400px;">
+                    <div class="bg-danger px-3 d-flex align-items-center text-white" style="height: 60px;">
+                        <p class="mb-0 text-nowrap">
+                            <b>Lo mejor del día</b>
                         </p>
                     </div>
-                    <div class="bg-body-secondary px-3 d-flex flex-column justify-content-center"
-                        style="width: 200px; height: 60px;">
-
-                        <p class="mb-0">Agenda</p>
-
-                        <p class="mb-0">
+                    <div class="bg-body-secondary px-3 d-flex flex-column justify-content-center flex-grow-1" style="height: 60px;">
+                        <p class="mb-0 text-truncate">Agenda</p>
+                        <p class="mb-0 text-nowrap">
                             <b>Jueves 23</b>
                         </p>
                     </div>
+                </div>
 
-                </span>
             </div>
             
-            <div>
-                <div class="dropdown">
-                    <button class="btn dropdown-toggle border-0" 
-                        type="button" 
-                        data-bs-toggle="dropdown" 
-                        aria-expanded="false">
-
-                        Ver Mas directos
-                    </button>
-                    <ul class="dropdown-menu border-0">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </div>
+            <!-- Botón desplegable -->
+            <!-- align-self-end lo empuja a la derecha cuando está apilado -->
+            <div class="dropdown align-self-end align-self-lg-auto">
+                <button class="btn dropdown-toggle border-0" 
+                    type="button" 
+                    data-bs-toggle="dropdown" 
+                    aria-expanded="false">
+                    Ver Más directos
+                </button>
+                <ul class="dropdown-menu border-0 shadow-sm">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
             </div>
 
         </div>
-
     </div>
 
     <!-- primera seccion de noticias -->
