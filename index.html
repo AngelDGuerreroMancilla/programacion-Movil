@@ -9,56 +9,53 @@
 </head>
 
 <body>
-    <div class="container-fluid position-relative p-4">
+    <div class="container-fluid py-3 px-3 px-md-4 border-bottom">
+    <div class="row align-items-center">
 
-        <div class=" d-flex justify-content-between align-items-center">
-
-            <div class="d-flex align-items-center">
-
-                <div class="d-flex align-items-center border-end border-secundary p-2" >
-                    <img class="mini-item ps-2" src="./images/radio-marca.png" alt="">
-                    <p class="m-0 px-2 py-1  d-none d-xxl-block"> La portada de hoy</p>
-                </div>
-                <div class="d-flex align-items-center border-end border-secundary p-2 ">
-                    <img class="mini-item ps-2" src="./images/cuidate+.png" alt="">
-                    <p class="m-0 px-2 py-1 d-none d-xxl-block ">Radio MARCA</p>
-                </div>
-                <div class="d-flex align-items-center p-2 " >
-                    <img class="mini-item ps-2" src="./images/lo_mas_trending.png" alt="">
-                    <p class="m-0 px-2 py-1  d-none d-xxl-block"  >La liga fantasy Marca</p>
-                </div> 
-            </div>
+        <div class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-start gap-3 order-3 order-lg-1 mt-3 mt-lg-0">
+            <a href="#" class="d-flex align-items-center text-decoration-none text-dark border-end border-secondary pe-3">
+                <img class="mini-item" src="./images/radio-marca.png" alt="La portada">
+                <span class="m-0 ms-2 d-none d-xxl-block">La portada de hoy</span>
+            </a>
             
-
-
-            <div class=" position-absolute top-50 start-50 translate-middle  ">
-                <img class="d-flex " src="./images/marca.png" alt="" style="max-width: 250px;">
-            </div>
-
-            <div class="d-flex align-items-center gap-3">
-
-                <div class="dropdown">
-
-                    <button 
-                        class="btn btn-light dropdown-toggle d-none d-lg-block"
-                        type="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <img class="bandera-idioma" src="./images/idioma_es.png" alt="ES"> ES
-                    </button>
-
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a class="dropdown-item" href="#"> <img class="bandera-idioma" src="./images/idioma_mx.png" alt="MX">  MX </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <button type="button" class="btn btn-danger d-none  d-md-block">Suscribete</button>
-                <button type="button" class="btn border  border-1 btn-outline-danger">Iniciar sesión</button>
-
-            </div>
+            <a href="#" class="d-flex align-items-center text-decoration-none text-dark border-end border-secondary pe-3">
+                <img class="mini-item" src="./images/cuidate+.png" alt="Radio MARCA">
+                <span class="m-0 ms-2 d-none d-xxl-block">Radio MARCA</span>
+            </a>
+            
+            <a href="#" class="d-flex align-items-center text-decoration-none text-dark">
+                <img class="mini-item" src="./images/lo_mas_trending.png" alt="Fantasy">
+                <span class="m-0 ms-2 d-none d-xxl-block">La liga fantasy Marca</span>
+            </a>
         </div>
+        
+        <div class="col-6 col-lg-4 d-flex justify-content-start justify-content-lg-center order-1 order-lg-2">
+            <a href="#">
+                <img src="./images/marca.png" alt="MARCA Logo" class="img-fluid" style="max-width: 220px;">
+            </a>
+        </div>
+
+        <div class="col-6 col-lg-4 d-flex justify-content-end align-items-center gap-3 order-2 order-lg-3">
+            
+            <div class="dropdown d-none d-lg-block">
+                <button class="btn btn-light dropdown-toggle border d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img class="bandera-idioma" src="./images/idioma_es.png" alt="ES" style="width: 20px;"> ES
+                </button>
+                <ul class="dropdown-menu shadow-sm">
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center gap-2" href="#"> 
+                            <img class="bandera-idioma" src="./images/idioma_mx.png" alt="MX" style="width: 20px;"> MX 
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <button type="button" class="btn btn-danger fw-bold ">Suscríbete</button>
+            <button type="button" class="btn btn-outline-danger fw-bold text-nowrap">Iniciar sesión</button>
+        </div>
+
+    </div>
+</div>
 
             
         
@@ -67,7 +64,6 @@
     <nav class="navbar navbar-expand-lg bg-danger">
         <div class="container">
 
-            <!-- BOTÓN HAMBURGUESA -->
             <button class="navbar-toggler border-0" 
                     data-bs-theme="dark"
                     type="button" 
@@ -81,12 +77,10 @@
             </button>
 
 
-            <!-- TODO ESTO SE VA A COLAPSAR -->
             <div class="collapse navbar-collapse" id="menuNavbar">
 
                 <ul class="navbar-nav">
 
-                    <!-- FÚTBOL -->
                     <li class="nav-item dropdown px-2">
                         <a class="nav-link dropdown-toggle text-white fs-4" 
                             href="#"
@@ -104,7 +98,6 @@
                     </li>
 
 
-                    <!-- BALONCESTO -->
                     <li class="nav-item dropdown px-2">
                         <a class="nav-link dropdown-toggle text-white fs-4" 
                             href="#"
@@ -122,7 +115,6 @@
                     </li>
 
 
-                    <!-- MOTOR -->
                     <li class="nav-item dropdown px-2">
                         <a class="nav-link dropdown-toggle text-white fs-4" 
                             href="#"
@@ -140,7 +132,6 @@
                     </li>
 
 
-                    <!-- POLIDEPORTIVO -->
                     <li class="nav-item dropdown px-2">
                         <a class="nav-link dropdown-toggle text-white fs-4" 
                             href="#"
@@ -158,7 +149,6 @@
                     </li>
 
 
-                    <!-- MÁS -->
                     <li class="nav-item dropdown px-2">
                         <a class="nav-link dropdown-toggle text-white fs-4" 
                             href="#"
@@ -178,7 +168,6 @@
                 </ul>
 
 
-                <!-- BUSCADOR -->
                 <form class="d-flex ms-auto" role="search">
                     <div class="input-group">    
                         <input 
@@ -212,8 +201,8 @@
 
     <!-- escudos -->
     <div class="bg-body-secondary m-0">
-    
-        <ul class=" d-flex   justify-content-center m-0  gap-2 list-unstyled ">
+        <div class="overflow-x-auto w-100">
+        <ul class="d-flex justify-content-start justify-content-lg-center m-0 gap-2 list-unstyled flex-nowrap py-2 px-3">
             <li class="">
                 <a href="#" class="text-decoration-none text-dark">
                     <img  class="escudo" src="./images/escudos/america.png">
@@ -310,12 +299,13 @@
                 </a>
             </li>
         </ul>
+        </div>
     </div>
     
     <!-- anuncio Caliente -->
     <div class=" container d-flex justify-content-center p-3" >
         <a href="#">
-            <img src="./images/anuncio_caliente.png" alt="">
+            <img class="w-100" src="./images/anuncio_caliente.png" alt="">
         </a>
     </div>
     
@@ -348,7 +338,6 @@
                     </div>
                 </div>
 
-                <!-- Tarjeta 2: Lo mejor del día -->
                 <div class="d-flex flex-grow-1 w-100" style="max-width: 400px;">
                     <div class="bg-danger px-3 d-flex align-items-center text-white" style="height: 60px;">
                         <p class="mb-0 text-nowrap">
@@ -365,8 +354,6 @@
 
             </div>
             
-            <!-- Botón desplegable -->
-            <!-- align-self-end lo empuja a la derecha cuando está apilado -->
             <div class="dropdown align-self-end align-self-lg-auto">
                 <button class="btn dropdown-toggle border-0" 
                     type="button" 
@@ -388,17 +375,12 @@
     <div class="container my-2">
         <div class="row">
             
-            <!-- COLUMNA IZQUIERDA: NOTICIA PRINCIPAL -->
             <div class="col-12 col-md-8 p-3">
-                <!-- Agregamos d-flex, flex-column y h-100 para que el artículo ocupe todo el alto disponible -->
                 <article class="d-flex flex-column h-100">
-                    <!-- flex-grow-1 hace que el contenedor de la imagen estire su altura -->
                     <a href="#" class="text-decoration-none flex-grow-1">
                         <div class="position-relative w-100 h-100">
-                            <!-- Imagen: cambiamos aspect-ratio por h-100 -->
                             <img class="w-100 h-100" src="./images/noticias/noticia1.png" alt="Champions" style="object-fit: cover; min-height: 300px;">
                             
-                            <!-- Degradado y Textos superpuestos -->
                             <div class="position-absolute bottom-0 start-0 w-100 p-4" style="background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);">
                                 <p class="text-white mb-1 fs-6">Descubre a los ocho grandes favoritos</p>
                                 <h2 class="text-white fw-bold mb-0">¿Cuál es el mejor once para reinar en Europa?</h2>
@@ -406,7 +388,6 @@
                         </div>
                     </a>
 
-                    <!-- Pie de noticia: Autor y Comentarios -->
                     <div class="d-flex justify-content-between align-items-center mt-2 pb-2 border-black border-bottom">
                         <p class="text-body-secondary mb-0 text-uppercase" style="font-size: 11px;">
                             RUBÉN JIMÉNEZ, ENRIQUE MEDINA
@@ -421,7 +402,6 @@
                 </article>
             </div>
 
-            <!-- COLUMNA DERECHA: NOTICIAS SECUNDARIAS -->
             <div class="col-12 col-md-4 p-3 d-flex flex-column justify-content-between">
 
                 <!-- ARTÍCULO 1 -->
@@ -481,7 +461,6 @@
                     </div>
                 </article>
 
-                <!-- ARTÍCULO 3 (TEXTOS ACTUALIZADOS) -->
             
                 <article class="border-bottom border-black pb-2">
                     <a href="#" class="text-decoration-none text-reset">
@@ -760,19 +739,15 @@
     </div>
 
     <footer>
-    <!-- SECCIÓN SUPERIOR: Enlaces Oscuros -->
     <div class="bg-dark text-white py-4" style="background-color: #1a1a1a !important;">
         <div class="container">
             
-            <!-- Título central -->
             <h6 class="text-center fw-bold mb-3" style="font-size: 15px;">
                 Otras webs de Unidad Editorial
             </h6>
             
-            <!-- Línea separadora -->
             <hr class="border-light opacity-50 mb-4">
 
-            <!-- Cuadrícula de 4 columnas -->
             <div class="row">
                 
                 <!-- Columna 1: Marca -->
@@ -791,7 +766,6 @@
                     </ul>
                 </div>
 
-                <!-- Columna 2: Ocio y Moda -->
                 <div class="col-12 col-sm-6 col-md-3 mb-4">
                     <h6 class="fw-bold mb-3" style="font-size: 14px;">Ocio y Moda</h6>
                     <ul class="list-unstyled" style="font-size: 13px; line-height: 1.8;">
@@ -805,7 +779,6 @@
                     </ul>
                 </div>
 
-                <!-- Columna 3: Unidad Editorial -->
                 <div class="col-12 col-sm-6 col-md-3 mb-4">
                     <h6 class="fw-bold mb-3" style="font-size: 14px;">Unidad Editorial</h6>
                     <ul class="list-unstyled" style="font-size: 13px; line-height: 1.8;">
@@ -819,7 +792,6 @@
                     </ul>
                 </div>
 
-                <!-- Columna 4: Formación y Empleo -->
                 <div class="col-12 col-sm-6 col-md-3 mb-4">
                     <h6 class="fw-bold mb-3" style="font-size: 14px;">Formación y Empleo</h6>
                     <ul class="list-unstyled" style="font-size: 13px; line-height: 1.8;">
@@ -833,7 +805,6 @@
         </div>
     </div>
 
-    <!-- SECCIÓN INFERIOR: Copyright y Textos Legales -->
     <div class="bg-light py-4 text-center text-dark">
         <div class="container">
             
@@ -841,7 +812,6 @@
                 © Agosto 2018 Unidad Editorial Información Deportiva, S.L.U. Todos los derechos reservados.
             </p>
             
-            <!-- d-flex flex-wrap permite que los enlaces bajen de línea en móviles sin romperse -->
             <div class="d-flex flex-wrap justify-content-center gap-3" style="font-size: 12px;">
                 <a href="#" class="text-decoration-none text-dark">Términos y condiciones de uso</a>
                 <a href="#" class="text-decoration-none text-dark">Política de privacidad</a>
