@@ -391,137 +391,211 @@
 
     </div>
 
+    <!-- primera seccion de noticias -->
     <div class="container my-2">
-    <div class="row">
-        
-        <!-- COLUMNA IZQUIERDA: NOTICIA PRINCIPAL -->
-        <div class="col-12 col-md-8 p-3">
-            <!-- Agregamos d-flex, flex-column y h-100 para que el artículo ocupe todo el alto disponible -->
-            <article class="d-flex flex-column h-100">
-                <!-- flex-grow-1 hace que el contenedor de la imagen estire su altura -->
-                <a href="#" class="text-decoration-none flex-grow-1">
-                    <div class="position-relative w-100 h-100">
-                        <!-- Imagen: cambiamos aspect-ratio por h-100 -->
-                        <img class="w-100 h-100" src="./images/noticias/noticia1.png" alt="Champions" style="object-fit: cover; min-height: 300px;">
-                        
-                        <!-- Degradado y Textos superpuestos -->
-                        <div class="position-absolute bottom-0 start-0 w-100 p-4" style="background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);">
-                            <p class="text-white mb-1 fs-6">Descubre a los ocho grandes favoritos</p>
-                            <h2 class="text-white fw-bold mb-0">¿Cuál es el mejor once para reinar en Europa?</h2>
+        <div class="row">
+            
+            <!-- COLUMNA IZQUIERDA: NOTICIA PRINCIPAL -->
+            <div class="col-12 col-md-8 p-3">
+                <!-- Agregamos d-flex, flex-column y h-100 para que el artículo ocupe todo el alto disponible -->
+                <article class="d-flex flex-column h-100">
+                    <!-- flex-grow-1 hace que el contenedor de la imagen estire su altura -->
+                    <a href="#" class="text-decoration-none flex-grow-1">
+                        <div class="position-relative w-100 h-100">
+                            <!-- Imagen: cambiamos aspect-ratio por h-100 -->
+                            <img class="w-100 h-100" src="./images/noticias/noticia1.png" alt="Champions" style="object-fit: cover; min-height: 300px;">
+                            
+                            <!-- Degradado y Textos superpuestos -->
+                            <div class="position-absolute bottom-0 start-0 w-100 p-4" style="background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);">
+                                <p class="text-white mb-1 fs-6">Descubre a los ocho grandes favoritos</p>
+                                <h2 class="text-white fw-bold mb-0">¿Cuál es el mejor once para reinar en Europa?</h2>
+                            </div>
                         </div>
-                    </div>
-                </a>
-
-                <!-- Pie de noticia: Autor y Comentarios -->
-                <div class="d-flex justify-content-between align-items-center mt-2 pb-2 border-bottom">
-                    <p class="text-body-secondary mb-0 text-uppercase" style="font-size: 11px;">
-                        RUBÉN JIMÉNEZ, ENRIQUE MEDINA
-                    </p>
-                    <a href="#" class="text-decoration-none d-flex align-items-center gap-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6c757d" class="bi bi-chat-left-fill" viewBox="0 0 16 16">
-                            <path d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        </svg>
-                        <span class="text-danger fw-bold" style="font-size: 12px;">468</span>
                     </a>
-                </div>
-            </article>
-        </div>
 
-        <!-- COLUMNA DERECHA: NOTICIAS SECUNDARIAS -->
-        <div class="col-12 col-md-4 p-3 d-flex flex-column justify-content-between">
+                    <!-- Pie de noticia: Autor y Comentarios -->
+                    <div class="d-flex justify-content-between align-items-center mt-2 pb-2 border-bottom">
+                        <p class="text-body-secondary mb-0 text-uppercase" style="font-size: 11px;">
+                            RUBÉN JIMÉNEZ, ENRIQUE MEDINA
+                        </p>
+                        <a href="#" class="text-decoration-none d-flex align-items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6c757d" class="bi bi-chat-left-fill" viewBox="0 0 16 16">
+                                <path d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                            </svg>
+                            <span class="text-danger fw-bold" style="font-size: 12px;">67</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- COLUMNA DERECHA: NOTICIAS SECUNDARIAS -->
+            <div class="col-12 col-md-4 p-3 d-flex flex-column justify-content-between">
+
+                <!-- ARTÍCULO 1 -->
+                <article class="border-bottom mb-3 pb-2">
+                    <a href="#" class="text-decoration-none text-reset">
+                        <div class="d-flex gap-3 mb-2">
+                            <div style="width: 45%;">
+                                <img src="./images/noticias/noticia2.png" alt="Amenaza de huelga" class="w-100 object-fit-cover" style="aspect-ratio: 4/3;">
+                            </div>
+                            <div style="width: 55%;">
+                                <p class="text-primary fw-bold mb-1 text-uppercase" style="font-size: 11px;">
+                                    LALIGA SANTANDER
+                                </p>
+                                <h6 class="fw-bold mb-0 text-dark">
+                                    Amenaza de huelga
+                                </h6>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="text-body-secondary mb-0 text-uppercase" style="font-size: 10px;">
+                            A. MOGOLLO Y E. BORDA
+                        </p>
+                        <a href="#" class="text-decoration-none d-flex align-items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#6c757d" class="bi bi-chat-left-fill" viewBox="0 0 16 16">
+                                <path d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                            </svg>
+                            <span class="text-danger fw-bold" style="font-size: 11px;">306</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- ARTÍCULO 2 -->
+                <article class="border-bottom mb-3 pb-2">
+                    <a href="#" class="text-decoration-none text-reset">
+                        <div class="d-flex gap-3 mb-2">
+                            <div style="width: 45%;">
+                                <img src="./images/noticias/noticia3.png" alt="Mercado Fichajes" class="w-100 object-fit-cover" style="aspect-ratio: 4/3;">
+                            </div>
+                            <div style="width: 55%;">
+                                <p class="text-primary fw-bold mb-1 text-uppercase" style="font-size: 11px;">
+                                    FICHAJES
+                                </p>
+                                <h6 class="fw-bold mb-0 text-dark">
+                                    Mercado: el 'recambio' de Filipe Luis puede llegar de Alemania
+                                </h6>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="d-flex justify-content-end align-items-center">
+                        <a href="#" class="text-decoration-none d-flex align-items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#6c757d" class="bi bi-chat-left-fill" viewBox="0 0 16 16">
+                                <path d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                            </svg>
+                            <span class="text-danger fw-bold" style="font-size: 11px;">92</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- ARTÍCULO 3 (TEXTOS ACTUALIZADOS) -->
+            
+                <article class="border-bottom pb-2">
+                    <a href="#" class="text-decoration-none text-reset">
+                        <div class="d-flex gap-3 mb-2">
+                            <div style="width: 45%;">
+                                <img src="./images/noticias/noticia4.png" alt="Real Madrid" class="w-100 object-fit-cover" style="aspect-ratio: 4/3;">
+                            </div>
+                            <div style="width: 55%;">
+                                <p class="text-primary fw-bold mb-1 text-uppercase" style="font-size: 11px;">
+                                    REAL MADRID
+                                </p>
+                                <h6 class="fw-bold mb-0 text-dark">
+                                    Champions y Liga para el portero titular
+                                </h6>
+                            </div>
+                        </div>
+                    </a>
+                
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="text-body-secondary mb-0 text-uppercase" style="font-size: 10px;">
+                            JOSÉ FÉLIX DÍAZ
+                        </p>
+                        <a href="#" class="text-decoration-none d-flex align-items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#6c757d" class="bi bi-chat-left-fill" viewBox="0 0 16 16">
+                                <path d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                            </svg>
+                            <span class="text-danger fw-bold" style="font-size: 11px;">206</span>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container my-4">
+        <div class="row">
 
             <!-- ARTÍCULO 1 -->
-            <article class="border-bottom mb-3 pb-2">
-                <a href="#" class="text-decoration-none text-reset">
-                    <div class="d-flex gap-3 mb-2">
-                        <div style="width: 45%;">
-                            <img src="./images/noticias/noticia2.png" alt="Amenaza de huelga" class="w-100 object-fit-cover" style="aspect-ratio: 4/3;">
+            <div class="col-12 col-sm-4 mb-4">
+                <div class="border-bottom pb-3 h-100 d-flex flex-column">
+                    <a href="#" class="text-decoration-none text-reset flex-grow-1">
+                        <div class="position-relative mb-2">
+                            <img class="w-100" src="./images/noticias/noticia5.png" alt="Fútbol">
+                            <div class="position-absolute top-0 start-0 bg-info text-white">
+                                <p class="m-1 fw-bold" style="font-size: 11px;">FÚTBOL</p>
+                            </div>
                         </div>
-                        <div style="width: 55%;">
-                            <p class="text-primary fw-bold mb-1 text-uppercase" style="font-size: 11px;">
-                                LALIGA SANTANDER
-                            </p>
-                            <h6 class="fw-bold mb-0 text-dark">
-                                Amenaza de huelga
-                            </h6>
-                        </div>
-                    </div>
-                </a>
-                <div class="d-flex justify-content-between align-items-center">
-                    <p class="text-body-secondary mb-0 text-uppercase" style="font-size: 10px;">
-                        A. MOGOLLO Y E. BORDA
+                        
+                        <h4 class="fw-bold" style="font-size: 18px;">
+                            Felix Orode, el jugador nigeriano que explica el festejo de Dele Alli
+                        </h4>
+                    </a> 
+                    
+                    <p class="text-body-secondary mb-0 mt-auto text-uppercase" style="font-size: 11px;">
+                        &nbsp;
                     </p>
-                    <a href="#" class="text-decoration-none d-flex align-items-center gap-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#6c757d" class="bi bi-chat-left-fill" viewBox="0 0 16 16">
-                            <path d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        </svg>
-                        <span class="text-danger fw-bold" style="font-size: 11px;">306</span>
-                    </a>
                 </div>
-            </article>
+            </div> 
 
             <!-- ARTÍCULO 2 -->
-            <article class="border-bottom mb-3 pb-2">
-                <a href="#" class="text-decoration-none text-reset">
-                    <div class="d-flex gap-3 mb-2">
-                        <div style="width: 45%;">
-                            <img src="./images/noticias/noticia3.png" alt="Mercado Fichajes" class="w-100 object-fit-cover" style="aspect-ratio: 4/3;">
+            <div class="col-12 col-sm-4 mb-4">
+                <div class="border-bottom pb-3 h-100 d-flex flex-column">
+                    <a href="#" class="text-decoration-none text-reset flex-grow-1">
+                        <div class="position-relative mb-2">
+                            <img class="w-100" src="./images/noticias/noticia6.png" alt="Serie A">
+                            <div class="position-absolute top-0 start-0 bg-info text-white">
+                                <p class="m-1 fw-bold" style="font-size: 11px;">SERIE A</p>
+                            </div>
                         </div>
-                        <div style="width: 55%;">
-                            <p class="text-primary fw-bold mb-1 text-uppercase" style="font-size: 11px;">
-                                FICHAJES
-                            </p>
-                            <h6 class="fw-bold mb-0 text-dark">
-                                Mercado: el 'recambio' de Filipe Luis puede llegar de Alemania
-                            </h6>
-                        </div>
-                    </div>
-                </a>
-                <div class="d-flex justify-content-end align-items-center">
-                    <a href="#" class="text-decoration-none d-flex align-items-center gap-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#6c757d" class="bi bi-chat-left-fill" viewBox="0 0 16 16">
-                            <path d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        </svg>
-                        <span class="text-danger fw-bold" style="font-size: 11px;">92</span>
-                    </a>
-                </div>
-            </article>
-
-            <!-- ARTÍCULO 3 (TEXTOS ACTUALIZADOS) -->
-          
-            <article class="border-bottom pb-2">
-                <a href="#" class="text-decoration-none text-reset">
-                    <div class="d-flex gap-3 mb-2">
-                        <div style="width: 45%;">
-                            <img src="./images/noticias/noticia4.png" alt="Real Madrid" class="w-100 object-fit-cover" style="aspect-ratio: 4/3;">
-                        </div>
-                        <div style="width: 55%;">
-                            <p class="text-primary fw-bold mb-1 text-uppercase" style="font-size: 11px;">
-                                REAL MADRID
-                            </p>
-                            <h6 class="fw-bold mb-0 text-dark">
-                                Champions y Liga para el portero titular
-                            </h6>
-                        </div>
-                    </div>
-                </a>
-               
-                <div class="d-flex justify-content-between align-items-center">
-                    <p class="text-body-secondary mb-0 text-uppercase" style="font-size: 10px;">
-                        JOSÉ FÉLIX DÍAZ
+                        
+                        <h4 class="fw-bold" style="font-size: 18px;">
+                            Cristiano habla sobre Cuadrado y la cesión del número 6-7
+                        </h4>
+                    </a> 
+                    
+                    <p class="text-body-secondary mb-0 mt-auto text-uppercase" style="font-size: 11px;">
+                        REDACCIÓN MARCA CLARO
                     </p>
-                    <a href="#" class="text-decoration-none d-flex align-items-center gap-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#6c757d" class="bi bi-chat-left-fill" viewBox="0 0 16 16">
-                            <path d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        </svg>
-                        <span class="text-danger fw-bold" style="font-size: 11px;">206</span>
-                    </a>
                 </div>
-            </article>
+            </div>
+
+            <!-- ARTÍCULO 3 -->
+            <div class="col-12 col-sm-4 mb-4">
+                <div class="border-bottom pb-3 h-100 d-flex flex-column">
+                    <a href="#" class="text-decoration-none text-reset flex-grow-1">
+                        <div class="position-relative mb-2">
+                            <img class="w-100" src="./images/noticias/noticia7.png" alt="México">
+                            <div class="position-absolute top-0 start-0 bg-info text-white">
+                                <p class="m-1 fw-bold" style="font-size: 11px;">MÉXICO</p>
+                            </div>
+                        </div>
+                        
+                        <h4 class="fw-bold" style="font-size: 18px;">
+                            La joya celeste que hace soñar a Cruz Azul
+                        </h4>
+                    </a> 
+                    
+                    <p class="text-body-secondary mb-0 mt-auto text-uppercase" style="font-size: 11px;">
+                        JAVIER CARDOSO
+                    </p>
+                </div>
+            </div>               
 
         </div>
     </div>
-</div>
 
     
 
