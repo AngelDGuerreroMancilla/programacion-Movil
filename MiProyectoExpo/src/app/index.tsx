@@ -11,12 +11,13 @@ export default function Index() {
   const [text, onChangeText] = useState('');
   
   const onPressLearnMore = () => {
-    Alert.alert("Angel", "el texto que se escribio " + text);
+    Alert.alert(text, "el texto que se escribio ");
   };
 
   const toggleSwitch = (value: boolean) => {
     console.warn("Switch cambio a valor: ", value)
     setSwitchValue(value)
+
   }
 
   return (
@@ -40,6 +41,7 @@ export default function Index() {
         color="#841584"
         accessibilityLabel="Learn more about this purple button"
       />
+      <Text>El switch esta: {switchValue ? "Encendido": "Apagado"} </Text> 
     </View>
     
   );
