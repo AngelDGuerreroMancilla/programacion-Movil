@@ -18,7 +18,7 @@ export default function Index() {
 
   const onRegister = () =>{
     router.push({
-      pathname: "register",
+      pathname: "/register",
     });
   }
 
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#3895e6",
+    backgroundColor: "#ffff",
   },
   input: {
     height: 40,
