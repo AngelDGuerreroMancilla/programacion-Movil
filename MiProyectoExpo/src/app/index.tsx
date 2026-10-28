@@ -2,7 +2,6 @@ import { Alert, Button, StyleSheet, Text, View, TextInput } from "react-native";
 import { useState } from "react";
 import {useRouter } from "expo-router"
 
-// Validaciones
 export const isValidEmail = (email: string): boolean =>
   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
@@ -13,8 +12,15 @@ export const isValidPassword = (password: string): boolean =>
   /[^A-Za-z0-9]/.test(password);
 
 export default function Index() {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const onRegister = () =>{
+    router.push({
+      pathname: "register",
+    });
+  }
 
   const onLogin = () => {
     // 3.- Ningún campo vacío
@@ -71,7 +77,8 @@ export default function Index() {
         value={password}
       />
 
-      <Button title="Entrar" onPress={onLogin} color="#841584" />
+      <Button title="Iniciar sesion" onPress={onLogin} color="#841584" />
+      <Button title="Regitrarse" onPress={onRegister} color="#841584" />
     </View>
   );
 }
