@@ -1,49 +1,78 @@
-import { Alert, Button, StyleSheet, Text, View, Switch, TextInput } from "react-native";
+import { Alert, Button, StyleSheet, Text, View, TextInput } from "react-native";
 import { useState } from "react";
 import {useRouter } from "expo-router"
 
+// Validaciones
+export const isValidEmail = (email: string): boolean =>
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-
+export const isValidPassword = (password: string): boolean =>
+  password.length >= 8 &&
+  /[A-Z]/.test(password) &&
+  /[a-z]/.test(password) &&
+  /[^A-Za-z0-9]/.test(password);
 
 export default function Index() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const [switchValue, setSwitchValue] = useState(false);
-  const [text, onChangeText] = useState('');
-  
-  const onPressLearnMore = () => {
-    Alert.alert(text, "el texto que se escribio ");
+  const onLogin = () => {
+    // 3.- Ningún campo vacío
+    if (!email && !password) {
+      Alert.alert("Error", "Los campos están vacíos");
+      return;
+    }
+    if (!email) {
+      Alert.alert("Error", "El correo está vacío");
+      return;
+    }
+    if (!password) {
+      Alert.alert("Error", "La contraseña está vacía");
+      return;
+    }
+
+    // 1.- Email validado con regex
+    if (!isValidEmail(email)) {
+      Alert.alert("Error", "Correo inválido");
+      return;
+    }
+
+    // 3.- Reglas de la contraseña
+    if (!isValidPassword(password)) {
+      Alert.alert(
+        "Error",
+        "La contraseña debe tener al menos 8 caracteres, mayúsculas, minúsculas y 1 carácter especial"
+      );
+      return;
+    }
+
+    Alert.alert("Bienvenido", email);
   };
-
-  const toggleSwitch = (value: boolean) => {
-    console.warn("Switch cambio a valor: ", value)
-    setSwitchValue(value)
-
-  }
 
   return (
     <View style={styles.container}>
-      <Text>HOLA MUNDO</Text>
-      <Switch
-        onValueChange={toggleSwitch}
-        value={switchValue}
-      />
+      <Text>Iniciar sesión</Text>
+
       <TextInput
         style={styles.input}
-        onChangeText={onChangeText}
-        value={text}
-
-        >
-
-      </TextInput>
-      <Button
-        onPress={onPressLearnMore}
-        title="Learn More"
-        color="#841584"
-        accessibilityLabel="Learn more about this purple button"
+        placeholder="Correo electrónico"
+        keyboardType="email-address"
+        autoCapitalize="none"
+        onChangeText={setEmail}
+        value={email}
       />
-      <Text>El switch esta: {switchValue ? "Encendido": "Apagado"} </Text> 
+
+      {/* 2.- Contraseña oculta */}
+      <TextInput
+        style={styles.input}
+        placeholder="Contraseña"
+        secureTextEntry
+        onChangeText={setPassword}
+        value={password}
+      />
+
+      <Button title="Entrar" onPress={onLogin} color="#841584" />
     </View>
-    
   );
 }
 
@@ -56,11 +85,11 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 40,
-    width: '80%',
+    width: "80%",
     margin: 12,
     borderWidth: 1,
     backgroundColor: "white",
     borderRadius: 5,
-
-  }
+    paddingHorizontal: 8,
+  },
 });
