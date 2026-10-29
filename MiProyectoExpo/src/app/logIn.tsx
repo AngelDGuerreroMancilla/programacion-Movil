@@ -1,4 +1,4 @@
-import { Alert, Button, StyleSheet, Text, View, TextInput } from "react-native";
+import { Alert, Button, StyleSheet, Text, View, TextInput, Image } from "react-native";
 import { useState } from "react";
 import {useRouter } from "expo-router"
 
@@ -57,6 +57,10 @@ export default function Index() {
 
   return (
     <View style={styles.container}>
+      <Image 
+        style= {styles.tinyLogo}
+        source={require('../../assets/images/icon.png')}
+        ></Image>
       <Text>Iniciar sesión</Text>
 
       <TextInput
@@ -78,7 +82,8 @@ export default function Index() {
       />
 
       <Button title="Iniciar sesion" onPress={onLogin} color="#841584" />
-      <Button title="Regitrarse" onPress={onRegister} color="#841584" />
+      <Text style = {styles.smallText}>¿Aun no tienes una cuenta?</Text>
+      <Button title="Regitrarse" onPress={onRegister} color="#f411f476" />
     </View>
   );
 }
@@ -98,5 +103,12 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderRadius: 5,
     paddingHorizontal: 8,
+  },
+  smallText:{
+    fontSize: 12,
+  },
+  tinyLogo: {
+    width: 50,
+    height: 50,
   },
 });

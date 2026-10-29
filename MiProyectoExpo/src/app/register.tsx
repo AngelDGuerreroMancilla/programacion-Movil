@@ -1,5 +1,6 @@
 import { Alert, Button, StyleSheet, Text, View, TextInput } from "react-native";
 import { useState } from "react";
+import {useRouter } from "expo-router"
 
 
 export const isValidEmail = (email: string): boolean =>
@@ -12,11 +13,16 @@ export const isValidPassword = (password: string): boolean =>
   /[^A-Za-z0-9]/.test(password);
 
 export default function Index() {
-  
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
 
+  const onLogin = () =>{
+    router.push({
+      pathname: "/logIn",
+    });
+  }
   const onRegister = () => {
     // 3.- Ningún campo vacío
     
@@ -74,7 +80,7 @@ export default function Index() {
       <Text>Contraseña:</Text>
       <TextInput
         style={styles.input}
-        placeholder="*****"
+        placeholder = "******"
         secureTextEntry
         onChangeText={setPassword}
         value={password}
@@ -82,14 +88,18 @@ export default function Index() {
       <Text>Confirmar contraseña:</Text>
       <TextInput
         style={styles.input}
-        placeholder="******"
+        placeholder= "******"
         secureTextEntry
         onChangeText={setPasswordConfirm}
         value={passwordConfirm}
       />
     
-      <Button title="Regitrarse" onPress={onRegister} color="#f411f476" />
+      <Button title="Regitrarse" onPress={onRegister} color="#841584" />
+      <Text 
+      style={styles.smallText}>¿Ya tienes una cuenta?</Text>
+      <Button title="Iniciar sesion" onPress={onLogin} color="#f411f476" />
     </View>
+
   );
 }
 
@@ -109,4 +119,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     paddingHorizontal: 8,
   },
+  smallText:{
+    fontSize: 12,
+  }
 });

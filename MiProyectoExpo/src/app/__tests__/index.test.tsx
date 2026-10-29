@@ -1,6 +1,6 @@
 import { Alert } from "react-native";
 import { render, fireEvent, screen } from "@testing-library/react-native";
-import Index, { isValidEmail, isValidPassword } from "../index";
+import Index, { isValidEmail, isValidPassword } from "../logIn";
 
 describe("Index (Login Screen)", () => {
   let alertSpy: jest.SpyInstance;
