@@ -111,16 +111,16 @@ describe("LogIn (Login Screen)", () => {
     });
     
   });
-  it("Navegar a la pantalla de registro", () => {
+  it("Navegar a la pantalla de registro", async () => {
     const mockPush = jest.fn();
 
     jest.mocked(useRouter).mockReturnValue({
       push: mockPush,
     } as any);
 
-    const { getByText } = render(<LogIn />);
+    await render(<LogIn />);
 
-    fireEvent.press(getByText("Registrarse"));
+    await fireEvent.press(screen.getByText("Registrarse"));
 
     expect(mockPush).toHaveBeenCalledTimes(1);
     expect(mockPush).toHaveBeenCalledWith({
