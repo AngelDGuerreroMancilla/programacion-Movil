@@ -3,7 +3,7 @@ export interface Artist {
     name: string
     image: string
 }
-export interface ArtistResorce {
+export interface ArtistResource {
     id: number
     name: string
     mbid: string
@@ -11,4 +11,4 @@ export interface ArtistResorce {
 }
 interface ImageUrl {
     '#text': string
-}
+} 
