@@ -16,7 +16,7 @@ export default function Index() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const onRegister = () =>{
+ const onRegister = () =>{
     router.push({
       pathname: "/register",
     });
@@ -60,8 +60,9 @@ export default function Index() {
       <Image 
         style= {styles.tinyLogo}
         source={require('../../assets/images/icon.png')}
+        accessibilityLabel="Imagen de logo expo"
         ></Image>
-      <Text>Iniciar sesión</Text>
+      <Text>Iniciar sesión:</Text>
 
       <TextInput
         style={styles.input}
@@ -81,9 +82,9 @@ export default function Index() {
         value={password}
       />
 
-      <Button title="Iniciar sesion" onPress={onLogin} color="#841584" />
+      <Button title="Iniciar sesión" onPress={onLogin} color="#841584" />
       <Text style = {styles.smallText}>¿Aun no tienes una cuenta?</Text>
-      <Button title="Regitrarse" onPress={onRegister} color="#f411f476" />
+      <Button title="Registrarse" onPress={onRegister} color="#f411f476" />
     </View>
   );
 }

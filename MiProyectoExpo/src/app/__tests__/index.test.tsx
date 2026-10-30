@@ -1,8 +1,16 @@
 import { Alert } from "react-native";
 import { render, fireEvent, screen } from "@testing-library/react-native";
-import Index, { isValidEmail, isValidPassword } from "../logIn";
+import LogIn, { isValidEmail, isValidPassword, } from "../logIn";
+import { useRouter } from "expo-router";
 
-describe("Index (Login Screen)", () => {
+jest.mock('expo-router',() =>({
+  useRouter: jest.fn(),
+}))
+
+describe("LogIn (Login Screen)", () => {
+
+  
+
   let alertSpy: jest.SpyInstance;
 
   beforeEach(() => {
@@ -14,46 +22,48 @@ describe("Index (Login Screen)", () => {
   });
 
   it("renders correctly", async () => {
-    await render(<Index />);
-    expect(screen.getByText("Iniciar sesión")).toBeTruthy();
+    await render(<LogIn/>);
+    expect(screen.getByLabelText("Imagen de logo expo"))
+    expect(screen.getByText("Iniciar sesión:")).toBeTruthy();
     expect(screen.getByPlaceholderText("Correo electrónico")).toBeTruthy();
     expect(screen.getByPlaceholderText("Contraseña")).toBeTruthy();
-    expect(screen.getByText("Entrar")).toBeTruthy();
+    expect(screen.getByText("¿Aun no tienes una cuenta?")).toBeTruthy();
+
   });
 
   it("shows alert when fields are empty", async () => {
-    await render(<Index />);
-    await fireEvent.press(screen.getByText("Entrar"));
+    await render(<LogIn/>);
+    await fireEvent.press(screen.getByText("Iniciar sesión"));
     expect(alertSpy).toHaveBeenCalledWith("Error", "Los campos están vacíos");
   });
 
   it("shows alert when only email is empty", async () => {
-    await render(<Index />);
+    await render(<LogIn/>);
     await fireEvent.changeText(
       screen.getByPlaceholderText("Contraseña"),
       "Password1!"
     );
-    await fireEvent.press(screen.getByText("Entrar"));
+    await fireEvent.press(screen.getByText("Iniciar sesión"));
     expect(alertSpy).toHaveBeenCalledWith("Error", "El correo está vacío");
   });
 
   it("shows alert when only password is empty", async () => {
-    await render(<Index />);
+    await render(<LogIn/>);
     await fireEvent.changeText(
       screen.getByPlaceholderText("Correo electrónico"),
       "test@example.com"
     );
-    await fireEvent.press(screen.getByText("Entrar"));
+    await fireEvent.press(screen.getByText("Iniciar sesión"));
     expect(alertSpy).toHaveBeenCalledWith("Error", "La contraseña está vacía");
   });
 
   it("has secure text entry for password field", async () => {
-    await render(<Index />);
+    await render(<LogIn/>);
     expect(screen.getByPlaceholderText("Contraseña").props.secureTextEntry).toBe(true);
   });
 
   it("has correct keyboard type for email field", async () => {
-    await render(<Index />);
+    await render(<LogIn/>);
     expect(screen.getByPlaceholderText("Correo electrónico").props.keyboardType).toBe(
       "email-address"
     );
@@ -97,7 +107,24 @@ describe("Index (Login Screen)", () => {
     });
 
     it("rejects passwords with only numbers and special characters", () => {
-      expect(isValidPassword("12345678!@#")).toBe(false);
+      expect(isValidPassword("12345678!@#")).toBe(false); 
+    });
+    
+  });
+  it("Navegar a la pantalla de registro", () => {
+    const mockPush = jest.fn();
+
+    jest.mocked(useRouter).mockReturnValue({
+      push: mockPush,
+    } as any);
+
+    const { getByText } = render(<LogIn />);
+
+    fireEvent.press(getByText("Registrarse"));
+
+    expect(mockPush).toHaveBeenCalledTimes(1);
+    expect(mockPush).toHaveBeenCalledWith({
+      pathname: "/register",
     });
   });
 });
