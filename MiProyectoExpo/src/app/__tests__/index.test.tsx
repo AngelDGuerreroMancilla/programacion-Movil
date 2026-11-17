@@ -127,4 +127,29 @@ describe("LogIn (Login Screen)", () => {
       pathname: "/register",
     });
   });
+
+  it("Navegar a home al iniciar sesión con credenciales válidas", async () => {
+    const mockPush = jest.fn();
+
+    jest.mocked(useRouter).mockReturnValue({
+      push: mockPush,
+    } as any);
+
+    await render(<LogIn />);
+
+    await fireEvent.changeText(
+      screen.getByPlaceholderText("Correo electrónico"),
+      "user@example.com"
+    );
+    await fireEvent.changeText(
+      screen.getByPlaceholderText("Contraseña"),
+      "Password1!"
+    );
+    await fireEvent.press(screen.getByText("Iniciar sesión"));
+
+    expect(alertSpy).toHaveBeenCalledWith("Bienvenido", "user@example.com");
+    expect(mockPush).toHaveBeenCalledWith({
+      pathname: "/home",
+    });
+  });
 });

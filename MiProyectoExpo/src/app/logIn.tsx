@@ -53,6 +53,9 @@ export default function Index() {
     }
 
     Alert.alert("Bienvenido", email);
+    router.push({
+      pathname: "/home",
+    });
   };
 
   return (
